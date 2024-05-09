@@ -10,13 +10,19 @@ import {
 } from "./styles"
 
 export function Home() {
+  function handleSubmit(event) {
+    event.target.task.value
+  }
+
+
   return (
     <HomeContainer>
-      <form action="">
+      <form onSubmit={handleSubmit} action="">
         <FormContainer>
           <label htmlFor="task">Vou trabalhar em</label>
           <TaskInput
             id="task"
+            name="task"
             list="task-suggestions"
             placeholder="Dê um nome para seu projeto"
           />
